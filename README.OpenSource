@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "AnimationEasingFunctions",
+        "License": "MIT license",
+        "License File": " LICENSE ",
+        "Version Number": "2.0",
+        "Owner" : "daimajia@gmail.com",
+        "Upstream URL": "https://github.com/daimajia/AnimationEasingFunctions",
+        "Description": "An animation collection, to help you make animation easier."
+    }
+]
