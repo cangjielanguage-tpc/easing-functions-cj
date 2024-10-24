@@ -1,0 +1,9 @@
+{
+  "module": {
+    "name": "easingfunctions",
+    "type": "har",
+    "deviceTypes": [
+      "default"
+    ]
+  }
+}
