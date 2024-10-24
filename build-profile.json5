@@ -38,8 +38,8 @@
       ]
     },
     {
-      "name": "easingfunctions4cj",
-      "srcPath": "./easingfunctions4cj"
+      "name": "easingfunctions",
+      "srcPath": "./easingfunctions"
     }
   ]
 }

@@ -25,7 +25,7 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
 ├─doc        # API文档和使用手册存放目录                   
 ├─entry      # 示例代码文件夹    
 ├─hvigor  # 构建工具目录              
-├─easingfunctions4cj    # easingfunctions4cj 库文件夹                   
+├─easingfunctions    # easingfunctions4cj 库文件夹                   
 │  └─src
 │      └─main
 │          ├─cangjie
@@ -41,12 +41,12 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
 - `entry src main` APP项目目录
 - `entry src main cangjie` 仓颉代码目录
 - `entry src main resources` 资源文件目录
-- `easingfunctions4cj` 工程模块 - 编译生成一个har包
-- `easingfunctions4cj src` 模块代码目录
-- `easingfunctions4cj src main` 模块项目目录
-- `easingfunctions4cj src main cangjie` 仓颉代码目录
-- `easingfunctions4cj src main resources` 资源文件目录
-- `easingfunctions4cj src main cangjie src` 仓颉源码文件目录
+- `easingfunctions` 工程模块 - 编译生成一个har包
+- `easingfunctions src` 模块代码目录
+- `easingfunctions src main` 模块项目目录
+- `easingfunctions src main cangjie` 仓颉代码目录
+- `easingfunctions src main resources` 资源文件目录
+- `easingfunctions src main cangjie src` 仓颉源码文件目录
 - `hvigor` 构建工具目录
 
 ### 接口说明
@@ -59,8 +59,8 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
 
 1. 通过module引入
     1. 克隆下载项目
-    2. 将easingfunctions4cj模块拷贝到应用项目下
-    3. 修改自身应用 entry 下的 oh-package.json5 文件，在 dependencies 字段添加 "easingfunctions4cj": "file:../easingfunctions4cj"
+    2. 将easingfunctions模块拷贝到应用项目下
+    3. 修改自身应用 entry 下的 oh-package.json5 文件，在 dependencies 字段添加 "easingfunctions": "file:../easingfunctions"
        ```json
        {
           "name": "entry",
@@ -70,22 +70,22 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
           "author": "",
           "license": "",
          "dependencies": {
-             "seasingfunctions4cj": "file:../easingfunctions4cj"
+             "seasingfunctions": "file:../easingfunctions"
          }
        }
        ```
-    4. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，在 [dependencies] 字段下添加 easingfunctions4cj = {path = "../../../../easingfunctions4cj/src/main/cangjie", version = "1.0.0"}
+    4. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，在 [dependencies] 字段下添加 easingfunctions = {path = "../../../../easingfunctions/src/main/cangjie", version = "1.0.0"}
        ```toml
        [dependencies]
            easingfunctions4cj = {path = "../../../../easingfunctions4cj/src/main/cangjie", version = "1.0.0"}
        ```
-    5. 在项目中使用 import easingfunctions4cj.* 引用easingfunctions4cj项目
+    5. 在项目中使用 import easingfunctions.* 引用easingfunctions项目
        ```cangjie
-       import easingfunctions4cj.*
+       import easingfunctions.*
        ```
 
-2. 把 easingfunctions4cj 作为三方库依赖引入
-    1. 目标工程把 easingfunctions4cj 依赖库作为 git submodule 引入
+2. 把 easingfunctions 作为三方库依赖引入
+    1. 目标工程把 easingfunctions 依赖库作为 git submodule 引入
 
     ```
     > cd $工程根目录
@@ -96,11 +96,11 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
     2. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，添加依赖
     ```toml
     [dependencies]
-        easingfunctions4cj = {path = "../../../../third-party/easingfunctions4cj/easingfunctions4cj/src/main/cangjie", version = "1.0.0"}
+        easingfunctions4cj = {path = "../../../../third-party/easingfunctions4cj/easingfunctions/src/main/cangjie", version = "1.0.0"}
      ```
-    3. 在项目中使用 easingfunctions4cj 组件
+    3. 在项目中使用 easingfunctions 组件
        ```cangjie
-       import easingfunctions4cj.*
+       import easingfunctions.*
        ```
 
 ### 功能示例

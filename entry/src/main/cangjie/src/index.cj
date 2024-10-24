@@ -21,7 +21,7 @@ import ohos.component.*
 import ohos.animator.*
 import ohos.state_manage.*
 import ohos.state_macro_manage.*
-import easingfunctions4cj.*
+import easingfunctions.*
 
 class LineToParams {
     public var x: Float64
