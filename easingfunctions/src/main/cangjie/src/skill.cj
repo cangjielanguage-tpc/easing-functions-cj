@@ -19,6 +19,7 @@ public enum Skill <: ToString & Equatable<Skill> {
     | _CubicEaseInOut
     | _ElasticEaseIn
     | _ElasticEaseOut
+    | _ElasticEaseInOut
     | _ExpoEaseIn
     | _ExpoEaseOut
     | _ExpoEaseInOut
@@ -76,6 +77,9 @@ public enum Skill <: ToString & Equatable<Skill> {
         if (this == _ElasticEaseOut) {
             return ElasticEaseOut()
         }
+        if (this == _ElasticEaseInOut) {
+            return ElasticEaseInOut()
+        }
         if (this == _ExpoEaseIn) {
             return ExpoEaseIn()
         }
@@ -131,6 +135,7 @@ public enum Skill <: ToString & Equatable<Skill> {
             case _CubicEaseInOut => "CubicEaseInOut"
             case _ElasticEaseIn => "ElasticEaseIn"
             case _ElasticEaseOut => "ElasticEaseOut"
+            case _ElasticEaseInOut => "ElasticEaseInOut"
             case _ExpoEaseIn => "ExpoEaseIn"
             case _ExpoEaseOut => "ExpoEaseOut"
             case _ExpoEaseInOut => "ExpoEaseInOut"
@@ -163,6 +168,7 @@ public enum Skill <: ToString & Equatable<Skill> {
             case (_CubicEaseInOut, _CubicEaseInOut) => true
             case (_ElasticEaseIn, _ElasticEaseIn) => true
             case (_ElasticEaseOut, _ElasticEaseOut) => true
+            case (_ElasticEaseInOut, _ElasticEaseInOut) => true
             case (_ExpoEaseIn, _ExpoEaseIn) => true
             case (_ExpoEaseOut, _ExpoEaseOut) => true
             case (_ExpoEaseInOut, _ExpoEaseInOut) => true
