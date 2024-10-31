@@ -15,6 +15,7 @@
   | CubicEaseInOut
   | ElasticEaseIn
   | ElasticEaseOut
+  | ElasticEaseInOut
   | ExpoEaseIn
   | ExpoEaseOut
   | ExpoEaseInOut

@@ -5,18 +5,23 @@
 package easingfunctions
 
 import std.math.sqrt
+import std.math.MathExtension
 
 public class CircEaseInOut <: BaseEasingMethod {
     public init() {}
 
     public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
-        var tempt = t
-        (tempt /= d / 2.0)
-        if ( tempt < 1.0) {
-            return -c / 2.0 * (sqrt(1.0 - tempt * tempt) - 1.0) + b
+        try {
+            var tempt = t
+            (tempt /= d / 2.0)
+            if ( tempt < 1.0) {
+                return -c / 2.0 * (sqrt(1.0 - tempt * tempt) - 1.0) + b
+            }
+            (tempt -= 2.0)
+            return c / 2.0 * (sqrt(1.0 - tempt * tempt) + 1.0) + b
+        } catch (e: IllegalArgumentException) {
+            return Float64.NaN
         }
-        (tempt -= 2.0)
-        return c / 2.0 * (sqrt(1.0 - tempt * tempt) + 1.0) + b
     }
 }
 

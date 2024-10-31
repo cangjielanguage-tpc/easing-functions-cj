@@ -8,7 +8,7 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
 
 ### 1.1 easingfunctions4cj
 
-#### 1.1.1 EntryOhos Class API Description
+#### 1.1.1 Class API Description
 
 ```cangjie
 public enum Skill <: ToString & Equatable<Skill> {
@@ -26,6 +26,7 @@ public enum Skill <: ToString & Equatable<Skill> {
     | _CubicEaseInOut
     | _ElasticEaseIn
     | _ElasticEaseOut
+    | _ElasticEaseInOut
     | _ExpoEaseIn
     | _ExpoEaseOut
     | _ExpoEaseInOut
@@ -55,17 +56,17 @@ public enum Skill <: ToString & Equatable<Skill> {
     public func toString(): String
     
     /*
-     * 枚举判等
+     * 对象判等
      * 
-     * 参数 that - 被对比的枚举值
+     * 参数 that - 被对比的对象
      * 返回值 Bool - 是否相等
      */
     public operator func ==(that: Skill): Bool
     
     /*
-     * 枚举判不等
+     * 对象判不等
      * 
-     * 参数 that - 被对比的枚举值
+     * 参数 that - 被对比的对象
      * 返回值 Bool - 是否不等
      */
     public operator func !=(that: Skill): Bool
@@ -86,12 +87,12 @@ public interface BaseEasingMethod {
 
 public class BackEaseIn <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
     
     /*
-     * 构造
+     * 构造函数
      *
      * 参数 back - 插值曲线变化幅度
      */
@@ -111,12 +112,12 @@ public class BackEaseIn <: BaseEasingMethod {
 
 public class BackEaseInOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
     
     /*
-     * 构造
+     * 构造函数
      *
      * 参数 back - 插值曲线变化幅度
      */
@@ -136,12 +137,12 @@ public class BackEaseInOut <: BaseEasingMethod {
 
 public class BackEaseOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
     
     /*
-     * 构造
+     * 构造函数
      *
      * 参数 back - 插值曲线变化幅度
      */
@@ -161,7 +162,7 @@ public class BackEaseOut <: BaseEasingMethod {
 
 public class BounceEaseIn <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -179,7 +180,7 @@ public class BounceEaseIn <: BaseEasingMethod {
 
 public class BounceEaseInOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -197,7 +198,7 @@ public class BounceEaseInOut <: BaseEasingMethod {
 
 public class BounceEaseOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -215,7 +216,7 @@ public class BounceEaseOut <: BaseEasingMethod {
 
 public class CircEaseIn <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -233,7 +234,7 @@ public class CircEaseIn <: BaseEasingMethod {
 
 public class CircEaseInOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -251,7 +252,7 @@ public class CircEaseInOut <: BaseEasingMethod {
 
 public class CircEaseOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -269,7 +270,7 @@ public class CircEaseOut <: BaseEasingMethod {
 
 public class CubicEaseIn <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -287,7 +288,7 @@ public class CubicEaseIn <: BaseEasingMethod {
 
 public class CubicEaseInOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -305,7 +306,7 @@ public class CubicEaseInOut <: BaseEasingMethod {
 
 public class CubicEaseOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -323,7 +324,7 @@ public class CubicEaseOut <: BaseEasingMethod {
 
 public class ElasticEaseIn <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -341,7 +342,7 @@ public class ElasticEaseIn <: BaseEasingMethod {
 
 public class ElasticEaseInOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -359,7 +360,7 @@ public class ElasticEaseInOut <: BaseEasingMethod {
 
 public class ElasticEaseOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -377,7 +378,7 @@ public class ElasticEaseOut <: BaseEasingMethod {
 
 public class ExpoEaseIn <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -395,7 +396,7 @@ public class ExpoEaseIn <: BaseEasingMethod {
 
 public class ExpoEaseInOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -413,7 +414,7 @@ public class ExpoEaseInOut <: BaseEasingMethod {
 
 public class ExpoEaseOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -431,7 +432,7 @@ public class ExpoEaseOut <: BaseEasingMethod {
 
 public class Linear <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -449,7 +450,7 @@ public class Linear <: BaseEasingMethod {
 
 public class QuadEaseIn <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -467,7 +468,7 @@ public class QuadEaseIn <: BaseEasingMethod {
 
 public class QuadEaseInOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -485,7 +486,7 @@ public class QuadEaseInOut <: BaseEasingMethod {
 
 public class QuadEaseOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -503,7 +504,7 @@ public class QuadEaseOut <: BaseEasingMethod {
 
 public class QuintEaseIn <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -521,7 +522,7 @@ public class QuintEaseIn <: BaseEasingMethod {
 
 public class QuintEaseInOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -539,7 +540,7 @@ public class QuintEaseInOut <: BaseEasingMethod {
 
 public class QuintEaseOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -557,7 +558,7 @@ public class QuintEaseOut <: BaseEasingMethod {
 
 public class SineEaseIn <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -575,7 +576,7 @@ public class SineEaseIn <: BaseEasingMethod {
 
 public class SineEaseInOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 
@@ -593,7 +594,7 @@ public class SineEaseInOut <: BaseEasingMethod {
 
 public class SineEaseOut <: BaseEasingMethod {
     /*
-     * 默认构造
+     * 默认构造函数
      */
     public init()
 

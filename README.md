@@ -5,7 +5,7 @@
 <p align="center">
 <img alt="" src="https://img.shields.io/badge/release-v0.0.1-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/build-pass-brightgreen" style="display: inline-block;" />
-<img alt="" src="https://img.shields.io/badge/cjc-v0.55.3-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/cjc-v0.53.12-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/cjcov-NA-red" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/project-open-brightgreen" style="display: inline-block;" />
 </p>
@@ -16,7 +16,35 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
 
 ### 特性
 
-1. 支持多种动画效果
+1. 支持多种动画效果,支持以下动画效果
+   | BackEaseIn
+   | BackEaseOut
+   | BackEaseInOut
+   | BounceEaseIn
+   | BounceEaseOut
+   | BounceEaseInOut
+   | CircEaseIn
+   | CircEaseOut
+   | CircEaseInOut
+   | CubicEaseIn
+   | CubicEaseOut
+   | CubicEaseInOut
+   | ElasticEaseIn
+   | ElasticEaseOut
+   | ElasticEaseInOut
+   | ExpoEaseIn
+   | ExpoEaseOut
+   | ExpoEaseInOut
+   | QuadEaseIn
+   | QuadEaseOut
+   | QuadEaseInOut
+   | QuintEaseIn
+   | QuintEaseOut
+   | QuintEaseInOut
+   | SineEaseIn
+   | SineEaseOut
+   | SineEaseInOut
+   | Linear
 
 ### 源码目录
 
@@ -25,7 +53,7 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
 ├─doc        # API文档和使用手册存放目录                   
 ├─entry      # 示例代码文件夹    
 ├─hvigor  # 构建工具目录              
-├─easingfunctions    # easingfunctions4cj 库文件夹                   
+├─easingfunctions    # easingfunctions4cj 库源码目录
 │  └─src
 │      └─main
 │          ├─cangjie
@@ -132,6 +160,7 @@ this.animator.onframe = {
     Hilog.info(0x0000, "v1", "liney = ${this.lineToParams.y}")
     this.onAnimateUpdate();
 }
+//详细使用示例请参考entry应用
 ```
 
 <p align="left">
