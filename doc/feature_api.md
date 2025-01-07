@@ -1,12 +1,12 @@
-# easingfunctions4cj 特性文档
+# easing-functions-cj 特性文档
 
 ## 介绍
 
-easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控制动画对象实现特定的运动轨迹。
+easing-functions-cj是一个动画效果库，该库的函数曲线可用于控制动画对象实现特定的运动轨迹。
 
-## 1 easingfunctions4cj
+## 1 easing-functions-cj
 
-### 1.1 easingfunctions4cj
+### 1.1 easing-functions-cj
 
 #### 1.1.1 Class API Description
 

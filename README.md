@@ -1,5 +1,5 @@
 <div align="center">
-<h1>easingfunctions4cj</h1>
+<h1>easing-functions-cj</h1>
 </div>
 
 <p align="center">
@@ -12,7 +12,7 @@
 
 ## 介绍
 
-easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控制动画对象实现特定的运动轨迹。
+easing-functions-cj是一个动画效果库，该库的函数曲线可用于控制动画对象实现特定的运动轨迹。
 
 ### 特性
 
@@ -53,13 +53,13 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
 ├─doc        # API文档和使用手册存放目录                   
 ├─entry      # 示例代码文件夹    
 ├─hvigor  # 构建工具目录              
-├─easingfunctions    # easingfunctions4cj 库源码目录
+├─easingfunctions    # easing-functions-cj 库源码目录
 │  └─src
 │      └─main
 │          ├─cangjie
 │          │  └─src           # 框架代码目录
 │          └─resources
-├─README.md  # easingfunctions4cj 介绍及使用说明
+├─README.md  # easing-functions-cj 介绍及使用说明
 ```
 
 - `AppScope` 全局资源存放目录和应用全局信息配置目录
@@ -119,7 +119,7 @@ easingfunctions4cj是一个动画效果库，该库的函数曲线可用于控�
     > cd $工程根目录
     > mkdir third-party
     > cd third-party
-    > git submodule add "https://gitcode.com/Cangjie-TPC/easingfunctions4cj.git"
+    > git submodule add "https://gitcode.com/Cangjie-TPC/easing-functions-cj.git"
     ```
     2. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，添加依赖
     ```toml
