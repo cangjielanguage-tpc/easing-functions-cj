@@ -5,7 +5,7 @@
 <p align="center">
 <img alt="" src="https://img.shields.io/badge/release-v0.0.1-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/build-pass-brightgreen" style="display: inline-block;" />
-<img alt="" src="https://img.shields.io/badge/cjc-v0.53.12-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/cjc-v0.53.18-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/cjcov-NA-red" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/project-open-brightgreen" style="display: inline-block;" />
 </p>
@@ -88,7 +88,7 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
 1. 通过module引入
     1. 克隆下载项目
     2. 将easingfunctions模块拷贝到应用项目下
-    3. 修改自身应用 entry 下的 oh-package.json5 文件，在 dependencies 字段添加 "easingfunctions": "file:../easingfunctions"
+    3. 修改自身应用 entry 下的 oh-package.json5 文件，在 dependencies 字段添加 "easingfunctions": "file:../easingfunctions"，点击右上角“Sync Now”
        ```json
        {
           "name": "entry",
@@ -98,34 +98,31 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
           "author": "",
           "license": "",
          "dependencies": {
-             "seasingfunctions": "file:../easingfunctions"
+             "easingfunctions": "file:../easingfunctions"
          }
        }
        ```
-    4. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，在 [dependencies] 字段下添加 easingfunctions = {path = "../../../../easingfunctions/src/main/cangjie", version = "1.0.0"}
-       ```toml
-       [dependencies]
-           easingfunctions4cj = {path = "../../../../easingfunctions4cj/src/main/cangjie", version = "1.0.0"}
+    4. entry\src\main\cangjie\cjpm.toml中将[dependencies.easingfunctions]下面的path改成
+       ```cangjie
+       path = "../../../../easingfunctions/src/main/cangjie"
        ```
     5. 在项目中使用 import easingfunctions.* 引用easingfunctions项目
        ```cangjie
        import easingfunctions.*
        ```
-
 2. 把 easingfunctions 作为三方库依赖引入
     1. 目标工程把 easingfunctions 依赖库作为 git submodule 引入
-
-    ```
-    > cd $工程根目录
-    > mkdir third-party
-    > cd third-party
-    > git submodule add "https://gitcode.com/Cangjie-TPC/easing-functions-cj.git"
-    ```
+       ```
+       > cd $工程根目录
+       > mkdir third-party
+       > cd third-party
+       > git submodule add "https://gitcode.com/Cangjie-TPC/easing-functions-cj.git"
+       ```
     2. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，添加依赖
-    ```toml
-    [dependencies]
-        easingfunctions4cj = {path = "../../../../third-party/easingfunctions4cj/easingfunctions/src/main/cangjie", version = "1.0.0"}
-     ```
+       ```toml
+       [dependencies.easingfunctions]
+         path = "../../../../third-party/easing-functions-cj/easingfunctions/src/main/cangjie"
+       ```
     3. 在项目中使用 easingfunctions 组件
        ```cangjie
        import easingfunctions.*
@@ -171,8 +168,8 @@ this.animator.onframe = {
 
 在下述版本验证通过：
 
-    DevEco Studio NEXT Developer Beta2(5.0.3.900) 
-    Cangjie Support Plugin 5.0.3.900
+    DevEco Studio 5.0.3 Release(5.0.9.300)
+    Cangjie Support Plugin 5.0.9.300
 
 ## 开源协议
 
