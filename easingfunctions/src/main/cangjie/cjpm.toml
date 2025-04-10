@@ -32,5 +32,5 @@
     lto = ""
   [profile.customized-option]
     debug = "-g -Woff all"
-    release = "--fast-math -O2 -Woff all"
+    release = "--fast-math -O2 -s -Woff all"
   [profile.test]
