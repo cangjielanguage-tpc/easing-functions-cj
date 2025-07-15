@@ -10,6 +10,6 @@ public class SineEaseIn <: BaseEasingMethod {
     public init() {}
 
     public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
-        return -c * Float64(cos(Float64(t / d) * (Float64.PI / 2.0))) + c + b
+        return -c * Float64(cos(Float64(t / d) * (Float64.GetPI() / 2.0))) + c + b
     }
 }

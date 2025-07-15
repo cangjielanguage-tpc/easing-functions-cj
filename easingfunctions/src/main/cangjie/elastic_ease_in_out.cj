@@ -23,11 +23,11 @@ public class ElasticEaseInOut <: BaseEasingMethod {
         let s = p / 4.0
         (tempt -= 1.0)
         if (tempt < 1.0) {
-            return -0.5f64 * (a * Float64(pow(2.0, Float64(10.0 * tempt))) * sin((tempt * d - s) * (2.0 * Float64.PI) / p
+            return -0.5f64 * (a * Float64(pow(2.0, Float64(10.0 * tempt))) * sin((tempt * d - s) * (2.0 * Float64.GetPI()) / p
             )) + b
         }
         (tempt -= 1.0)
-        return a * Float64(pow(2.0, Float64(-10.0 * tempt))) * sin((tempt * d - s) * (2.0 * Float64.PI) / p) * 0.5 + c +
+        return a * Float64(pow(2.0, Float64(-10.0 * tempt))) * sin((tempt * d - s) * (2.0 * Float64.GetPI()) / p) * 0.5 + c +
             b
     }
 }

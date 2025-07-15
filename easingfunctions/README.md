@@ -3,9 +3,9 @@
 </div>
 
 <p align="center">
-<img alt="" src="https://img.shields.io/badge/release-v1.0.0-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/release-v1.0.1-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/build-pass-brightgreen" style="display: inline-block;" />
-<img alt="" src="https://img.shields.io/badge/cjc-v0.53.21-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/cjc-v1.0.0-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/cjcov-NA-red" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/project-open-brightgreen" style="display: inline-block;" />
 </p>
@@ -79,7 +79,7 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
 
 ### 接口说明
 
-主要类和函数接口说明详见 [API](doc/feature_api.md)
+主要类和函数接口说明详见 [API](https://gitcode.com/Cangjie-TPC/easing-functions-cj/blob/easing-functions-cj_1.0.0_cangjie_plugin-5.1.0.828/doc/feature_api.md)
 
 ## 使用说明
 
@@ -161,15 +161,15 @@ this.animator.onframe = {
 ```
 
 <p align="left">
-<img src="./doc/assets/sample.png" width="30%" >
+<img src="https://raw.gitcode.com/Cangjie-TPC/easing-functions-cj/blobs/610a751f64b5b544632c15c4da95ddfb40aaa972/sample.png" width="30%" >
 </p>
 
 ## 约束与限制
 
 在下述版本验证通过：
 
-    DevEco Studio 5.0.5 Release(5.0.13.210)
-    Cangjie Support Plugin 5.0.13.210
+    DevEco Studio 5.1.0 Release(5.1.0.828SP1)
+    Cangjie Support Plugin 5.1.0.828
 
 ## 开源协议
 
