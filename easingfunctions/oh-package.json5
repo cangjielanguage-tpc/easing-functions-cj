@@ -1,10 +1,11 @@
 {
-  "name": "easingfunctions",
+  "name": "@cangjie-tpc/easingfunctions",
   "version": "1.0.0",
-  "description": "Please describe the basic information.",
+  "description": "easing-functions-cj是一个动画效果库，该库的函数曲线可用于控制动画对象实现特定的运动轨迹。",
   "main": "",
-  "author": "",
-  "license": "Apache-2.0",
+  "author": "cangjie-tpc",
+  "types": "./Index.d.ets",
+  "license": "MIT license",
   "dependencies": {
   }
 }
