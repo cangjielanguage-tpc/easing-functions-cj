@@ -34,7 +34,7 @@ class LineToParams {
 
 @Entry
 @Component
-class MyView {
+class EntryView {
     private var settings: RenderingContextSettings = RenderingContextSettings(antialias: true);
     private var context: CanvasRenderingContext2D = CanvasRenderingContext2D(this.settings);
 
@@ -105,7 +105,7 @@ class MyView {
         Skill._CubicEaseOut, Skill._CubicEaseInOut, Skill._ElasticEaseIn, Skill._ElasticEaseOut, Skill._ExpoEaseIn,
         Skill._ExpoEaseOut, Skill._ExpoEaseInOut, Skill._QuadEaseIn, Skill._QuadEaseOut, Skill._QuadEaseInOut,
         Skill._QuintEaseIn, Skill._QuintEaseOut, Skill._QuintEaseInOut, Skill._SineEaseIn, Skill._SineEaseOut,
-        Skill._SineEaseInOut, Skill._Linear]
+        Skill._SineEaseInOut, Skill._Linear, Skill._ElasticEaseInOut]
 
     func build() {
         Column {

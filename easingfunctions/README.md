@@ -88,7 +88,14 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
 1. 通过module引入
     1. 克隆下载项目
     2. 将easingfunctions模块拷贝到应用项目下
-    3. 修改自身应用 entry 下的 oh-package.json5 文件，在 dependencies 字段添加 "easingfunctions": "file:../easingfunctions"，点击右上角“Sync Now”
+    3. 在自身应用根目录build-profile.json5的"modules"中添加
+       ```json
+       {
+         "name": "easingfunctions",
+         "srcPath": "./easingfunctions"
+       }
+       ```
+    4. 修改自身应用 entry 下的 oh-package.json5 文件，在 dependencies 字段添加 "@cangjie-tpc/easingfunctions": "file:../easingfunctions"，点击右上角“Sync Now”
        ```json
        {
           "name": "entry",
@@ -98,15 +105,17 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
           "author": "",
           "license": "",
          "dependencies": {
-             "easingfunctions": "file:../easingfunctions"
+             "@cangjie-tpc/easingfunctions": "file:../easingfunctions"
          }
        }
        ```
-    4. entry\src\main\cangjie\cjpm.toml中将[dependencies.easingfunctions]下面的path改成
+    5. entry\cjpm.toml中中添加
        ```cangjie
-       path = "../../../../easingfunctions/src/main/cangjie"
+       [dependencies]
+         [dependencies.easingfunctions]
+           path = "${cangjie_tpc_easingfunctions}"
        ```
-    5. 在项目中使用 import easingfunctions.* 引用easingfunctions项目
+    6. 在项目中使用 import easingfunctions.* 引用easingfunctions项目
        ```cangjie
        import easingfunctions.*
        ```
