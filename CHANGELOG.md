@@ -1,6 +1,6 @@
 ## v1.0.0
 
-- 升级到DevEco Studio 5.0.5 Release(5.0.13.210)
+- 升级到DevEco Studio 5.0.5 Release(5.0.13.240)
 
 ## v0.0.1
 
