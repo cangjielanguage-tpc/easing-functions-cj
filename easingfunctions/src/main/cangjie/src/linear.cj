@@ -1,9 +1,7 @@
 /*
- * @Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
+ * Copyright (c) Huawei Technologies Co., Ltd. 2024-2025. All rights reserved.
  */
-
 package easingfunctions
-
 
 public class Linear <: BaseEasingMethod {
     public init() {}
