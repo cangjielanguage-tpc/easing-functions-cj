@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-<img alt="" src="https://img.shields.io/badge/release-v1.0.0-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/release-v1.0.1-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/build-pass-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/cjc-v1.0.3-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/cjcov-NA-red" style="display: inline-block;" />
@@ -49,37 +49,16 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
 ### 源码目录
 
 ```shell
-├─AppScope
-├─doc        # API文档和使用手册存放目录                   
-├─entry      # 示例代码文件夹    
-├─hvigor  # 构建工具目录              
-├─easingfunctions    # easing-functions-cj 库源码目录
-│  └─src
-│      └─main
-│          ├─cangjie
-│          │  └─src           # 框架代码目录
-│          └─resources
-├─README.md  # easing-functions-cj 介绍及使用说明
+├─doc                     # 文档目录
+├─entry                   # 示例代码文件夹
+├─easingfunctions         # easing-functions-cj 库源码目录
+│  └─src/main/cangjie     # 框架代码目录
+└──README.md              # 介绍及使用说明
 ```
-
-- `AppScope` 全局资源存放目录和应用全局信息配置目录
-- `doc` API文档和使用手册存放目录
-- `entry` 工程模块 - 编译生成一个HAP
-- `entry src` APP代码目录
-- `entry src main` APP项目目录
-- `entry src main cangjie` 仓颉代码目录
-- `entry src main resources` 资源文件目录
-- `easingfunctions` 工程模块 - 编译生成一个har包
-- `easingfunctions src` 模块代码目录
-- `easingfunctions src main` 模块项目目录
-- `easingfunctions src main cangjie` 仓颉代码目录
-- `easingfunctions src main resources` 资源文件目录
-- `easingfunctions src main cangjie src` 仓颉源码文件目录
-- `hvigor` 构建工具目录
 
 ### 接口说明
 
-主要类和函数接口说明详见 [API](https://gitcode.com/Cangjie-TPC/easing-functions-cj/blob/easing-functions-cj_1.0.0_cangjie_plugin-5.1.0.828/doc/feature_api.md)
+主要类和函数接口说明详见 [API](https://gitcode.com/Cangjie-TPC/easing-functions-cj/blob/easing-functions-cj_cangjie_plugin-5.1.1.840/doc/feature_api.md)
 
 ## 使用说明
 
@@ -109,13 +88,7 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
          }
        }
        ```
-    5. entry\cjpm.toml中中添加
-       ```cangjie
-       [dependencies]
-         [dependencies.easingfunctions]
-           path = "${cangjie_tpc_easingfunctions}"
-       ```
-    6. 在项目中使用 import easingfunctions.* 引用easingfunctions项目
+    5. 在项目中使用 import easingfunctions.* 引用easingfunctions项目
        ```cangjie
        import easingfunctions.*
        ```
@@ -140,7 +113,7 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
 ### 功能示例
 
 ```cangjie
-//第一步：创建自己需要的动画
+// 第一步：创建自己需要的动画
 var animator: AnimatorResult = AnimatorResult(
     AnimatorOptions(
         duration: 1000,
@@ -154,19 +127,19 @@ var animator: AnimatorResult = AnimatorResult(
     )
 )
 
-//第二步，实现onframe方法，并调用函数方法进行计算
+// 第二步，实现onframe方法，并调用函数方法进行计算
 this.animator.onframe = {
     value: Float64 =>
-    var xDistance = this.endPoint.x - this.beginPoint.x;
-    var yDistance = this.endPoint.y - this.beginPoint.y;
+    var xDistance = this.endPoint.x - this.beginPoint.x
+    var yDistance = this.endPoint.y - this.beginPoint.y
     this.lineToParams.x = this.beginPoint.x + value * xDistance
-    var f: Float64 = value;
-    var f2: Float64 = skill.getMethod().calculate(value, 0.0, 120.0, 1.0);
+    var f: Float64 = value
+    var f2: Float64 = skill.getMethod().calculate(value, 0.0, 120.0, 1.0)
     this.lineToParams.y = 170.0 - f2
     Hilog.info(0x0000, "v1", "liney = ${this.lineToParams.y}")
-    this.onAnimateUpdate();
+    this.onAnimateUpdate()
 }
-//详细使用示例请参考entry应用
+// 详细使用示例请参考entry应用
 ```
 
 <p align="left">

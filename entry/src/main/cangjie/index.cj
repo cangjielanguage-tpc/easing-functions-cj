@@ -1,15 +1,14 @@
 /*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025-2025. All rights reserved.
+ * Copyright (c) Huawei Technologies Co., Ltd. 2024-2025. All rights reserved.
  */
 package ohos_app_cangjie_entry
 
-internal import ohos.hilog.*
-internal import ohos.base.LengthProp
 import ohos.base.*
 import ohos.component.*
-import ohos.animator.*
 import ohos.state_manage.*
+import ohos.animator.*
 import ohos.state_macro_manage.*
+import ohos.hilog.*
 import easingfunctions.*
 
 class LineToParams {
@@ -24,16 +23,12 @@ class LineToParams {
 @Entry
 @Component
 class EntryView {
-    private var settings: RenderingContextSettings = RenderingContextSettings(antialias: true);
-    private var context: CanvasRenderingContext2D = CanvasRenderingContext2D(this.settings);
-
-    var backAnimator: ?AnimatorResult = None
-    var flag = false
+    private var settings: RenderingContextSettings = RenderingContextSettings(antialias: true)
+    private var context: CanvasRenderingContext2D = CanvasRenderingContext2D(this.settings)
     @State
     var wid = 100.0
     @State
     var hei = 100.0
-
     var animator: AnimatorResult = AnimatorResult(
         AnimatorOptions(
             duration: 1000,
@@ -46,35 +41,33 @@ class EntryView {
             end: 1.0
         )
     )
-    var isPlaying = false;
-
+    var isPlaying = false
     var lineToParams: LineToParams = LineToParams(20.0, 20.0)
-
     var beginPoint: LineToParams = LineToParams(20.0, 170.0)
     var endPoint: LineToParams = LineToParams(350.0, 0.0)
 
     func onAnimateUpdate() {
         if (this.lineToParams.x == this.beginPoint.x) {
-            return;
+            return
         }
         this.context.lineTo(
             this.lineToParams.x,
             this.lineToParams.y,
-        );
-        this.context.stroke();
+        )
+        this.context.stroke()
     }
 
     func createAnimation(skill: Skill) {
         this.animator.onframe = {
             value: Float64 =>
-            var xDistance = this.endPoint.x - this.beginPoint.x;
-            var yDistance = this.endPoint.y - this.beginPoint.y;
+            var xDistance = this.endPoint.x - this.beginPoint.x
+            var yDistance = this.endPoint.y - this.beginPoint.y
             this.lineToParams.x = this.beginPoint.x + value * xDistance
-            var f: Float64 = value;
-            var f2: Float64 = skill.getMethod().calculate(value, 0.0, 120.0, 1.0);
+            var f: Float64 = value
+            var f2: Float64 = skill.getMethod().calculate(value, 0.0, 120.0, 1.0)
             this.lineToParams.y = 170.0 - f2
             Hilog.info(0x0000, "v1", "liney = ${this.lineToParams.y}")
-            this.onAnimateUpdate();
+            this.onAnimateUpdate()
         }
         this.animator.onfinish = {
             => this.isPlaying = false
@@ -82,25 +75,25 @@ class EntryView {
     }
 
     func drawAnimationPath() {
-        this.context.clearRect(0, 0, 600, 600);
-        this.context.beginPath();
-        this.context.moveTo(this.beginPoint.x, this.beginPoint.y);
+        this.context.clearRect(0, 0, 600, 600)
+        this.context.beginPath()
+        this.context.moveTo(this.beginPoint.x, this.beginPoint.y)
         this.isPlaying = true
-        this.animator.play();
+        this.animator.play()
     }
 
     let arr = [Skill._BackEaseIn, Skill._BackEaseOut, Skill._BackEaseInOut, Skill._BounceEaseIn, Skill._BounceEaseOut,
         Skill._BounceEaseInOut, Skill._CircEaseIn, Skill._CircEaseOut, Skill._CircEaseInOut, Skill._CubicEaseIn,
-        Skill._CubicEaseOut, Skill._CubicEaseInOut, Skill._ElasticEaseIn, Skill._ElasticEaseOut, Skill._ExpoEaseIn,
-        Skill._ExpoEaseOut, Skill._ExpoEaseInOut, Skill._QuadEaseIn, Skill._QuadEaseOut, Skill._QuadEaseInOut,
-        Skill._QuintEaseIn, Skill._QuintEaseOut, Skill._QuintEaseInOut, Skill._SineEaseIn, Skill._SineEaseOut,
-        Skill._SineEaseInOut, Skill._Linear, Skill._ElasticEaseInOut]
+        Skill._CubicEaseOut, Skill._CubicEaseInOut, Skill._ElasticEaseIn, Skill._ElasticEaseOut, Skill._ElasticEaseInOut,
+        Skill._ExpoEaseIn, Skill._ExpoEaseOut, Skill._ExpoEaseInOut, Skill._QuadEaseIn, Skill._QuadEaseOut,
+        Skill._QuadEaseInOut, Skill._QuintEaseIn, Skill._QuintEaseOut, Skill._QuintEaseInOut, Skill._SineEaseIn,
+        Skill._SineEaseOut, Skill._SineEaseInOut, Skill._Linear]
 
     func build() {
         Column {
             Flex(
                 FlexParams(direction: FlexDirection.Column, alignItems: ItemAlign.Center,
-                justifyContent: FlexAlign.Center)) {
+                    justifyContent: FlexAlign.Center)) {
                 Canvas(this.context).width(100.percent).height(70.percent).backgroundColor(0xfff000).onReady({
                     => ()
                 })
@@ -113,28 +106,33 @@ class EntryView {
                             this.arr,
                             itemGeneratorFunc: {
                                 item: Skill, _: Int64 => ListItem() {
-                                    Button("${item.toString()}").fontSize(30).fontColor(Color.BLACK).onClick {
-                                        if (this.isPlaying) {
-                                            return;
+                                    Button("${item.toString()}")
+                                        .fontSize(30)
+                                        .fontColor(Color.BLACK)
+                                        .onClick {
+                                            if (this.isPlaying) {
+                                                return
+                                            }
+                                            this.createAnimation(item)
+                                            this.drawAnimationPath()
                                         }
-                                        this.createAnimation(item);
-                                        this.drawAnimationPath();
-                                    }
                                 }
                             }
                         )
-                    }.id("list").listDirection(Axis.Vertical) // 排列方向
-                        .scrollBar(BarState.Off).divider(strokeWidth: 2.px,
-                        color: Color(0xFFFFFF), startMargin: 20.px, endMargin: 20.px) // 每行之间的分界线
-                            .edgeEffect(EdgeEffect.Spring) // 边缘效果设置为Spring
-                            .
-                        onScrollIndex(
-                        {
-                            firstIndex: Int32, lastIndex: Int32 =>
-                            BaseLog.info("first" + firstIndex.toString())
-                            BaseLog.info("last" + lastIndex.toString())
-                        }
-                    ).width(90.percent)
+                    }
+                        .id("list")
+                        .listDirection(Axis.Vertical) // 排列方向
+                        .scrollBar(BarState.Off)
+                        .divider(strokeWidth: 2.px, color: Color(0xFFFFFF), startMargin: 20.px, endMargin: 20.px) // 每行之间的分界线
+                        .edgeEffect(EdgeEffect.Spring) // 边缘效果设置为Spring
+                        .onScrollIndex(
+                            {
+                                firstIndex: Int32, lastIndex: Int32 =>
+                                BaseLog.info("first" + firstIndex.toString())
+                                BaseLog.info("last" + lastIndex.toString())
+                            }
+                        )
+                        .width(90.percent)
                 }.width(100.percent).height(50.percent).backgroundColor(0xFFFFFF).padding(top: 5.px)
             }
         }
