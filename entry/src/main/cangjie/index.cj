@@ -63,9 +63,8 @@ class EntryView {
             var xDistance = this.endPoint.x - this.beginPoint.x
             var yDistance = this.endPoint.y - this.beginPoint.y
             this.lineToParams.x = this.beginPoint.x + value * xDistance
-            var f: Float64 = value
-            var f2: Float64 = skill.getMethod().calculate(value, 0.0, 120.0, 1.0)
-            this.lineToParams.y = 170.0 - f2
+            var f: Float32 = skill.getMethod().calculate(Float32(value), 0.0, 120.0, 1.0)
+            this.lineToParams.y = Float64(170.0 - f)
             Hilog.info(0x0000, "v1", "liney = ${this.lineToParams.y}")
             this.onAnimateUpdate()
         }
@@ -77,7 +76,7 @@ class EntryView {
     func drawAnimationPath() {
         this.context.clearRect(0, 0, 600, 600)
         this.context.beginPath()
-        this.context.moveTo(this.beginPoint.x, this.beginPoint.y)
+        this.context.moveTo(Float64(this.beginPoint.x), Float64(this.beginPoint.y))
         this.isPlaying = true
         this.animator.play()
     }

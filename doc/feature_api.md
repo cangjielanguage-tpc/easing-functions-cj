@@ -80,9 +80,9 @@ public interface BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class BackEaseIn <: BaseEasingMethod {
@@ -96,7 +96,7 @@ public class BackEaseIn <: BaseEasingMethod {
      *
      * 参数 back - 插值曲线变化幅度
      */
-    public init(back: Float64)
+    public init(back: Float32)
 
     /*
      * 动画插值计算
@@ -105,9 +105,9 @@ public class BackEaseIn <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class BackEaseInOut <: BaseEasingMethod {
@@ -121,7 +121,7 @@ public class BackEaseInOut <: BaseEasingMethod {
      *
      * 参数 back - 插值曲线变化幅度
      */
-    public init(back: Float64)
+    public init(back: Float32)
 
     /*
      * 动画插值计算
@@ -130,9 +130,9 @@ public class BackEaseInOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class BackEaseOut <: BaseEasingMethod {
@@ -146,7 +146,7 @@ public class BackEaseOut <: BaseEasingMethod {
      *
      * 参数 back - 插值曲线变化幅度
      */
-    public init(back: Float64)
+    public init(back: Float32)
 
     /*
      * 动画插值计算
@@ -155,9 +155,9 @@ public class BackEaseOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class BounceEaseIn <: BaseEasingMethod {
@@ -173,9 +173,9 @@ public class BounceEaseIn <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class BounceEaseInOut <: BaseEasingMethod {
@@ -191,9 +191,9 @@ public class BounceEaseInOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class BounceEaseOut <: BaseEasingMethod {
@@ -209,9 +209,9 @@ public class BounceEaseOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class CircEaseIn <: BaseEasingMethod {
@@ -227,9 +227,9 @@ public class CircEaseIn <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class CircEaseInOut <: BaseEasingMethod {
@@ -245,9 +245,9 @@ public class CircEaseInOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class CircEaseOut <: BaseEasingMethod {
@@ -263,9 +263,9 @@ public class CircEaseOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class CubicEaseIn <: BaseEasingMethod {
@@ -281,9 +281,9 @@ public class CubicEaseIn <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class CubicEaseInOut <: BaseEasingMethod {
@@ -299,9 +299,9 @@ public class CubicEaseInOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class CubicEaseOut <: BaseEasingMethod {
@@ -317,9 +317,9 @@ public class CubicEaseOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class ElasticEaseIn <: BaseEasingMethod {
@@ -335,9 +335,9 @@ public class ElasticEaseIn <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class ElasticEaseInOut <: BaseEasingMethod {
@@ -353,9 +353,9 @@ public class ElasticEaseInOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class ElasticEaseOut <: BaseEasingMethod {
@@ -371,9 +371,9 @@ public class ElasticEaseOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class ExpoEaseIn <: BaseEasingMethod {
@@ -389,9 +389,9 @@ public class ExpoEaseIn <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class ExpoEaseInOut <: BaseEasingMethod {
@@ -407,9 +407,9 @@ public class ExpoEaseInOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class ExpoEaseOut <: BaseEasingMethod {
@@ -425,9 +425,9 @@ public class ExpoEaseOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class Linear <: BaseEasingMethod {
@@ -443,9 +443,9 @@ public class Linear <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class QuadEaseIn <: BaseEasingMethod {
@@ -461,9 +461,9 @@ public class QuadEaseIn <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class QuadEaseInOut <: BaseEasingMethod {
@@ -479,9 +479,9 @@ public class QuadEaseInOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class QuadEaseOut <: BaseEasingMethod {
@@ -497,9 +497,9 @@ public class QuadEaseOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class QuintEaseIn <: BaseEasingMethod {
@@ -515,9 +515,9 @@ public class QuintEaseIn <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class QuintEaseInOut <: BaseEasingMethod {
@@ -533,9 +533,9 @@ public class QuintEaseInOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class QuintEaseOut <: BaseEasingMethod {
@@ -551,9 +551,9 @@ public class QuintEaseOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class SineEaseIn <: BaseEasingMethod {
@@ -569,9 +569,9 @@ public class SineEaseIn <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class SineEaseInOut <: BaseEasingMethod {
@@ -587,9 +587,9 @@ public class SineEaseInOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 
 public class SineEaseOut <: BaseEasingMethod {
@@ -605,8 +605,8 @@ public class SineEaseOut <: BaseEasingMethod {
      * 参数 b - 插值起始值
      * 参数 c - 插值结束值
      * 参数 d - 动画结束进度值
-     * 返回值 Float64 - 运算的插值
+     * 返回值 Float32 - 运算的插值
      */
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }
 ```

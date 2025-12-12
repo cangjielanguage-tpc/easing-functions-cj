@@ -8,11 +8,11 @@ import std.math.pow
 public class ExpoEaseIn <: BaseEasingMethod {
     public init() {}
 
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
         return if (t == 0.0) {
             b
         } else {
-            c * Float64(pow(2.0, Float64(10.0 * (t / d - 1.0)))) + b
+            c * Float32(pow(2.0, Float32(10.0 * (t / d - 1.0)))) + b
         }
     }
 }

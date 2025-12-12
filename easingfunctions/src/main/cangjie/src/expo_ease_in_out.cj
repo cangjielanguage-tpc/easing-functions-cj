@@ -8,7 +8,7 @@ import std.math.pow
 public class ExpoEaseInOut <: BaseEasingMethod {
     public init() {}
 
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
         var tempt = t
         if (tempt == 0.0) {
             return b
@@ -18,9 +18,9 @@ public class ExpoEaseInOut <: BaseEasingMethod {
         }
         (tempt /= d / 2.0)
         if (tempt < 1.0) {
-            return c / 2.0 * Float64(pow(2.0, Float64(10.0 * (tempt - 1.0)))) + b
+            return c / 2.0 * Float32(pow(2.0, Float32(10.0 * (tempt - 1.0)))) + b
         }
-        return c / 2.0 * (-Float64(pow(2.0, Float64(-10.0 * match (0) {
+        return c / 2.0 * (-Float32(pow(2.0, Float32(-10.0 * match (0) {
             case _ =>
                 tempt -= 1.0
                 tempt
