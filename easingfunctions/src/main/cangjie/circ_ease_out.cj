@@ -4,7 +4,6 @@
 package easingfunctions
 
 import std.math.sqrt
-import std.math.MathExtension
 
 public class CircEaseOut <: BaseEasingMethod {
     public init() {}
