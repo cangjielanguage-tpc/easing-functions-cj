@@ -8,7 +8,7 @@ import std.math.{cos, MathExtension}
 public class SineEaseIn <: BaseEasingMethod {
     public init() {}
 
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
-        return -c * Float64(cos(Float64(t / d) * (Float64.GetPI() / 2.0))) + c + b
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
+        return -c * Float32(cos(Float32(t / d) * (Float32.GetPI() / 2.0))) + c + b
     }
 }

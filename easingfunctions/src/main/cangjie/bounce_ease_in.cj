@@ -10,7 +10,7 @@ public class BounceEaseIn <: BaseEasingMethod {
         mBounceEaseOut = BounceEaseOut()
     }
 
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
         return c - mBounceEaseOut.calculate(d - t, 0.0, c, d) + b
     }
 }

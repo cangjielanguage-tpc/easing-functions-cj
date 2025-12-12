@@ -4,5 +4,5 @@
 package easingfunctions
 
 public interface BaseEasingMethod {
-    public func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64
+    public func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32
 }

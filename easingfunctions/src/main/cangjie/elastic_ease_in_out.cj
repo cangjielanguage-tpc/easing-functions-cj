@@ -8,7 +8,7 @@ import std.math.{pow, sin, MathExtension}
 public class ElasticEaseInOut <: BaseEasingMethod {
     public init() {}
 
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
         if (t == 0.0) {
             return b
         }
@@ -23,10 +23,10 @@ public class ElasticEaseInOut <: BaseEasingMethod {
 
         if (tempt < 1.0) {
             tempt -= 1.0
-            return -0.5 * (a * Float64(pow(2.0, 10.0 * tempt)) * sin((tempt * d - s) * (2.0 * Float64.GetPI()) / p)) + b
+            return -0.5 * (a * Float32(pow(2.0, 10.0 * tempt)) * sin((tempt * d - s) * (2.0 * Float32.GetPI()) / p)) + b
         } else {
             tempt -= 1.0
-            return a * Float64(pow(2.0, -10.0 * tempt)) * sin((tempt * d - s) * (2.0 * Float64.GetPI()) / p) * 0.5 + c +
+            return a * Float32(pow(2.0, -10.0 * tempt)) * sin((tempt * d - s) * (2.0 * Float32.GetPI()) / p) * 0.5 + c +
                 b
         }
     }

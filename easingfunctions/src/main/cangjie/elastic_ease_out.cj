@@ -8,7 +8,7 @@ import std.math.{pow, sin, MathExtension}
 public class ElasticEaseOut <: BaseEasingMethod {
     public init() {}
 
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
         var tempt = t
         if (tempt == 0.0) {
             return b
@@ -20,6 +20,6 @@ public class ElasticEaseOut <: BaseEasingMethod {
         let p = d * 0.3
         let a = c
         let s = p / 4.0
-        return (a * Float64(pow(2.0, Float64(-10.0 * tempt))) * sin((tempt * d - s) * (2.0 * Float64.GetPI()) / p) + c + b)
+        return (a * Float32(pow(2.0, Float32(-10.0 * tempt))) * sin((tempt * d - s) * (2.0 * Float32.GetPI()) / p) + c + b)
     }
 }
