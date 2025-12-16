@@ -9,13 +9,13 @@ import std.math.MathExtension
 public class CircEaseIn <: BaseEasingMethod {
     public init() {}
 
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
         try {
             var tempt = t
             (tempt /= d)
             return -c * (sqrt(1.0 - tempt * tempt) - 1.0) + b
         } catch (e: IllegalArgumentException) {
-            return Float64.NaN
+            return Float32.NaN
         }
     }
 }

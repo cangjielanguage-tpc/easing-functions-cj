@@ -4,15 +4,15 @@
 package easingfunctions
 
 public class BackEaseIn <: BaseEasingMethod {
-    private var s: Float64 = 1.70158f64
+    private var s: Float32 = 1.70158f32
 
     public init() {}
 
-    public init(back: Float64) {
+    public init(back: Float32) {
         s = back
     }
 
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
         var tempt = t
         tempt /= d
         return c * tempt * tempt * ((s + 1.0) * tempt - s) + b

@@ -9,7 +9,7 @@ import std.math.MathExtension
 public class CircEaseOut <: BaseEasingMethod {
     public init() {}
 
-    public override func calculate(t: Float64, b: Float64, c: Float64, d: Float64): Float64 {
+    public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
         try {
             var tempt = t
             return c * sqrt(1.0 - (match (0) {
@@ -18,7 +18,7 @@ public class CircEaseOut <: BaseEasingMethod {
                     tempt
             }) * tempt) + b
         } catch (e: IllegalArgumentException) {
-            return Float64.NaN
+            return Float32.NaN
         }
     }
 }
