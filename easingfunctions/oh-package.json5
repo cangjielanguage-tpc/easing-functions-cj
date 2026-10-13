@@ -1,7 +1,7 @@
 {
   "name": "@cangjie-tpc/easingfunctions",
   "version": "1.0.1",
-  "description": "easing-functions-cjæ˜¯ä¸€ä¸ªåŠ¨ç”»æ•ˆæœåº“ï¼Œè¯¥åº“çš„å‡½æ•°æ›²çº¿å¯ç”¨äºæ§åˆ¶åŠ¨ç”»å¯¹è±¡å®ç°ç‰¹å®šçš„è¿åŠ¨è½¨è¿¹ã€‚",
+  "description": "easing-functions-cjÊÇÒ»¸ö¶¯»­Ğ§¹û¿â£¬¸Ã¿âµÄº¯ÊıÇúÏß¿ÉÓÃÓÚ¿ØÖÆ¶¯»­¶ÔÏóÊµÏÖÌØ¶¨µÄÔË¶¯¹ì¼£¡£",
   "main": "",
   "author": "cangjie-tpc",
   "types": "./Index.d.ets",
