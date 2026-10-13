@@ -3,12 +3,12 @@
  */
 package easingfunctions
 
-import std.math.{sin, MathExtension}
+import std.math.{cos, MathExtension}
 
-public class SineEaseOut <: BaseEasingMethod {
+public class SineEaseIn <: BaseEasingMethod {
     public init() {}
 
     public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
-        return c * Float32(sin(Float32(t / d) * (Float32.PI / 2.0))) + b
+        return -c * Float32(cos(Float32(t / d) * (Float32.GetPI() / 2.0))) + c + b
     }
 }

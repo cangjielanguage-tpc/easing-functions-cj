@@ -5,7 +5,7 @@ package easingfunctions
 
 import std.math.{pow, sin, MathExtension}
 
-public class ElasticEaseIn <: BaseEasingMethod {
+public class ElasticEaseOut <: BaseEasingMethod {
     public init() {}
 
     public override func calculate(t: Float32, b: Float32, c: Float32, d: Float32): Float32 {
@@ -20,7 +20,6 @@ public class ElasticEaseIn <: BaseEasingMethod {
         let p = d * 0.3
         let a = c
         let s = p / 4.0
-        (tempt -= 1.0)
-        return -(a * Float32(pow(2.0, Float32(10.0 * tempt))) * sin((tempt * d - s) * (2.0 * Float32.PI) / p)) + b
+        return (a * Float32(pow(2.0, Float32(-10.0 * tempt))) * sin((tempt * d - s) * (2.0 * Float32.GetPI()) / p) + c + b)
     }
 }
