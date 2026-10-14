@@ -3,10 +3,10 @@
 </div>
 
 <p align="center">
-<img alt="" src="https://img.shields.io/badge/release-v1.0.0-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/release-v1.0.2-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/build-pass-brightgreen" style="display: inline-block;" />
-<img alt="" src="https://img.shields.io/badge/cjc-v0.53.20-brightgreen" style="display: inline-block;" />
-<img alt="" src="https://img.shields.io/badge/cjcov-NA-red" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/cjc-v1.1.3-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/cjcov-94.3%25-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/project-open-brightgreen" style="display: inline-block;" />
 </p>
 
@@ -52,13 +52,13 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
 ├─doc                     # 文档目录
 ├─entry                   # 示例代码文件夹
 ├─easingfunctions         # easing-functions-cj 库源码目录
-│  └─src/main/cangjie/src # 框架代码目录
+│  └─src/main/cangjie     # 框架代码目录
 └──README.md              # 介绍及使用说明
 ```
 
 ### 接口说明
 
-主要类和函数接口说明详见 [API](https://gitcode.com/Cangjie-TPC/easing-functions-cj/blob/easing-functions-cj_cangjie_plugin-5.0.13.240/doc/feature_api.md)
+主要类和函数接口说明详见 [API](https://gitcode.com/Cangjie-TPC/easing-functions-cj/blob/develop/doc/feature_api.md)
 
 ## 使用说明
 
@@ -105,13 +105,7 @@ easing-functions-cj是一个动画效果库，该库的函数曲线可用于控�
        [dependencies.easingfunctions]
          path = "../../../../third-party/easing-functions-cj/easingfunctions/src/main/cangjie"
        ```
-   3. 删除third-party\easing-functions-cj\easingfunctions\src\main\cangjie\cjpm.toml中
-      ```toml
-      [dependencies.cj_res_easingfunctions]
-        path = "./cj_res"
-        version = "1.0.0"
-      ```
-    4. 在项目中使用 easingfunctions 组件
+    3. 在项目中使用 easingfunctions 组件
        ```cangjie
        import easingfunctions.*
        ```
@@ -148,15 +142,15 @@ this.animator.onframe = {
 ```
 
 <p align="left">
-<img src="https://raw.gitcode.com/Cangjie-TPC/easing-functions-cj/raw/develop/doc%2Fassets%2Fsample.png" width="30%" >
+<img src="https://raw.gitcode.com/Cangjie-TPC/easing-functions-cj/blobs/610a751f64b5b544632c15c4da95ddfb40aaa972/sample.png" width="30%" >
 </p>
 
 ## 约束与限制
 
 在下述版本验证通过：
 
-    DevEco Studio 5.0.5 Release(5.0.13.240)
-    Cangjie Support Plugin 5.0.13.200
+    DevEco Studio 6.1.1 Release(6.1.1.280)
+    SdkVersion需使用20及以上版本
 
 ## 开源协议
 

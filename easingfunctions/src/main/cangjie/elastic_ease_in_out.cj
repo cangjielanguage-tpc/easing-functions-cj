@@ -23,10 +23,10 @@ public class ElasticEaseInOut <: BaseEasingMethod {
 
         if (tempt < 1.0) {
             tempt -= 1.0
-            return -0.5 * (a * Float32(pow(2.0, 10.0 * tempt)) * sin((tempt * d - s) * (2.0 * Float32.PI) / p)) + b
+            return -0.5 * (a * Float32(pow(2.0, 10.0 * tempt)) * sin((tempt * d - s) * (2.0 * Float32.GetPI()) / p)) + b
         } else {
             tempt -= 1.0
-            return a * Float32(pow(2.0, -10.0 * tempt)) * sin((tempt * d - s) * (2.0 * Float32.PI) / p) * 0.5 + c +
+            return a * Float32(pow(2.0, -10.0 * tempt)) * sin((tempt * d - s) * (2.0 * Float32.GetPI()) / p) * 0.5 + c +
                 b
         }
     }

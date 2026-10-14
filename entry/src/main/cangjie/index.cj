@@ -1,6 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2024-2025. All rights reserved.
- */
 package ohos_app_cangjie_entry
 
 import ohos.base.*
@@ -76,7 +73,7 @@ class EntryView {
     func drawAnimationPath() {
         this.context.clearRect(0, 0, 600, 600)
         this.context.beginPath()
-        this.context.moveTo(Float64(this.beginPoint.x), Float64(this.beginPoint.y))
+        this.context.moveTo(this.beginPoint.x, this.beginPoint.y)
         this.isPlaying = true
         this.animator.play()
     }

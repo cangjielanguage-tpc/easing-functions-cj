@@ -3,6 +3,7 @@
  */
 package easingfunctions
 
+
 public class Linear <: BaseEasingMethod {
     public init() {}
 
